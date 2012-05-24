@@ -30,6 +30,11 @@ def rename(path):
             new_filename = new_filename.replace(' ', '-')
             new_filename = new_filename.replace('_', '-')
             new_filename = new_filename.replace('--', '-')
+            new_filename = new_filename.replace('?', '')
+            new_filename = new_filename.replace(':', '-')
+            new_filename = new_filename.replace("'", "-")
+
+
             new_filename = new_filename.lower()
             new_path = os.path.join(path, new_filename)
 
